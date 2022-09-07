@@ -132,3 +132,9 @@ p{
     width: 100vw;
     justify-content:center;
 }
+footer{
+    display: flex;
+    justify-content:center;
+}
+
+

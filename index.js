@@ -46,6 +46,7 @@ async function displayProducts() {
       />
       <h4>$${product.price}</h4>
       <i class="fa fa-heart" id='like${product.id}' onclick="likeIt(${product.id})" " ></i>
+      <a href="" class="btn"> Add to cart <img src="cart.png" width="15px" /></a>
     </div>
 
 `;
