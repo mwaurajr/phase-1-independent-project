@@ -1,6 +1,7 @@
 const productsSection = document.querySelector(".products-section");
+const buyButton = document.getElementById("buyButton");
 
-const ExploreNowButton = document.getElementById("Explore Now");
+// const ExploreNowButton = document.getElementById("Explore Now");
 // const productCards= document.querySelectorAll(".product-card")
 // productCards.forEach((productCard=>{
 //     productCard.addEventListener('click',(e)=>{
@@ -46,12 +47,13 @@ async function displayProducts() {
       />
       <h4>$${product.price}</h4>
       <i class="fa fa-heart" id='like${product.id}' onclick="likeIt(${product.id})" " ></i>
-      <a href="" class="btn"> Add to cart <img src="cart.png" width="15px" /></a>
+      <button id="buyButton" type="button" >Add to cart</button>
     </div>
-
 `;
     });
-  });
-}
-
+    // buyButton.addEventListener("click", function(e) {
+    //   const buttonClick = prompt("Items 1")
+    
+    });
+  };
 displayProducts();
