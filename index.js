@@ -1,13 +1,6 @@
 const productsSection = document.querySelector(".products-section");
-const buyButton = document.getElementById("buyButton");
+const buyButton = document.querySelector(".buyButton");
 
-// const ExploreNowButton = document.getElementById("Explore Now");
-// const productCards= document.querySelectorAll(".product-card")
-// productCards.forEach((productCard=>{
-//     productCard.addEventListener('click',(e)=>{
-
-//     });
-// }))
 let likedProducts= []
 function likeIt(productId){
 if(!likedProducts.includes(productId)){
@@ -18,9 +11,6 @@ likedProducts.push(productId)
     likedProducts.splice(likedProducts.indexOf(productId),1)
 
 }
-// const quantityButton= document.getElementById(like).addEventLitstener('click',increaseQuantity)
-
-
 }
 function mouseenter(id){
     console.log("mouse has entered  product " + id)
@@ -47,13 +37,17 @@ async function displayProducts() {
       />
       <h4>$${product.price}</h4>
       <i class="fa fa-heart" id='like${product.id}' onclick="likeIt(${product.id})" " ></i>
-      <button id="buyButton" type="button" >Add to cart</button>
+      <button type="buyButton">Add to cart</button>
     </div>
 `;
     });
-    // buyButton.addEventListener("click", function(e) {
-    //   const buttonClick = prompt("Items 1")
-    
-    });
-  };
+    buyButton.addEventListener("click", alertUser)
+
+  function alertUser(){
+    alert ("Thank You")
+}
+  });
+
+}
+
 displayProducts();
